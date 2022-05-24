@@ -28,14 +28,14 @@ public class WeightedGraph<N,E> implements IWeightedGraph<N,E> {
 	public ArrayList<Integer> toEdgeList(){
 		ArrayList<Integer> edgeList = new ArrayList<>();
 		
-		edgeList.add(numberOfNodes());
+		edgeList.add(numberOfNodes());	
 		edgeList.add(numberOfEdges());
 
 		for (Map.Entry<Integer, ArrayList<IEdge<E>>> index : adjacencyList.entrySet()) {
 			int key = index.getKey();
+			edgeList.add(key);	// (source)
 			for (IEdge<E> value : index.getValue()) {
-				edgeList.add(key);
-				edgeList.add(value.getSource());
+				edgeList.add(value.getSource());	// (destination1, weight1, destination2, weight2, ...)
 			}
 		}
 
