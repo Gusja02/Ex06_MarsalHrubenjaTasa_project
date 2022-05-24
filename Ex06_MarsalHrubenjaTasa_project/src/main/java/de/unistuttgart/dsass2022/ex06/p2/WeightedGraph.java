@@ -22,7 +22,7 @@ public class WeightedGraph<N,E> implements IWeightedGraph<N,E> {
 	
 	
 	public void createFromEdgeList(ArrayList<Integer> list) throws UnsupportedOperationException{
-		
+		// TODO:
 	}
 	
 	public ArrayList<Integer> toEdgeList(){
@@ -43,10 +43,11 @@ public class WeightedGraph<N,E> implements IWeightedGraph<N,E> {
 	}
 	
 	public void createFromNodeList(ArrayList<Integer> list) throws UnsupportedOperationException{
-		
+		// TODO:
 	}
 	
 	public ArrayList<Integer> toNodeList(){
+		// TODO:
 		return null;
 	}
 	
