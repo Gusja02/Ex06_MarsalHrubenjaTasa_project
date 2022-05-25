@@ -25,6 +25,8 @@ public class WeightedGraph<N,E> implements IWeightedGraph<N,E> {
 		// TODO:
 	}
 	
+
+	// exampleList: {3,3, 1,2,1, 1,3,2, 2,3,2, 3,1,3}
 	public ArrayList<Integer> toEdgeList(){
 		ArrayList<Integer> edgeList = new ArrayList<>();
 		
@@ -33,9 +35,11 @@ public class WeightedGraph<N,E> implements IWeightedGraph<N,E> {
 
 		for (Map.Entry<Integer, ArrayList<IEdge<E>>> index : adjacencyList.entrySet()) {
 			int key = index.getKey();
-			edgeList.add(key);	// (source)
-			for (IEdge<E> value : index.getValue()) {
-				edgeList.add(value.getSource());	// (destination1, weight1, destination2, weight2, ...)
+			for (IEdge<E> value : index.getValue()) {	
+				edgeList.add(key);	// (source[index])
+				for (int i = 0; i < 2; i++) {
+					edgeList.add(value.getSource());	// (destination[index], weight[index], ...)
+				}
 			}
 		}
 
