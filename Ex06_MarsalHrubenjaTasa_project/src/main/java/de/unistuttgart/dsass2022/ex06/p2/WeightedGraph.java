@@ -25,6 +25,8 @@ public class WeightedGraph<N,E> implements IWeightedGraph<N,E> {
 		// TODO:
 	}
 	
+
+	// exampleList: {3,3, 1,2,1, 1,3,2, 2,3,2, 3,1,3}
 	public ArrayList<Integer> toEdgeList(){
 		ArrayList<Integer> edgeList = new ArrayList<>();
 		
